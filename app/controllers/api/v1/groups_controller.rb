@@ -18,6 +18,14 @@ class Api::V1::GroupsController < ApplicationController
         group = Group.find(params[:id])
         render json: group
     end
+
+    def update
+        if group.update(group_params)
+          render json: group
+        else
+          render json: {error: 'Group not updated'}
+        end
+    end
     
     def destroy
         group = Group.find(params[:id])

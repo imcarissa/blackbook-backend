@@ -19,7 +19,14 @@ class Api::V1::ContactsController < ApplicationController
         else
             render json: {error: 'Contact not created'}
         end
+    end
 
+    def update
+        if contact.update(contact_params)
+          render json: contact
+        else
+          render json: {error: 'Contact not updated'}
+        end
     end
     
     def destroy

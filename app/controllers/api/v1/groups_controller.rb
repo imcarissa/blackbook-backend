@@ -2,7 +2,7 @@ class Api::V1::GroupsController < ApplicationController
 
     def index
         group = Group.all 
-        render json: groups
+        render json: group
     end
 
     def create

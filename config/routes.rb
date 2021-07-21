@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-    resources :groups do
-    resources :contacts
+  namespace :api do
+    namespace :v1 do
+      resources :groups do
+        resources :contacts
+      end     
+    end
   end
 end

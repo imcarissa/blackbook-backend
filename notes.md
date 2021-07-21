@@ -5,6 +5,7 @@ Group
     - name:string
     - category:string
     - description:string
+    - img_url
 
 
 

@@ -18,3 +18,9 @@ Contact
     - email: string
     - phone_number:integer
     - notes:string
+
+
+    * might have to create 3rd model 'category' to create a foreign key
+        - remove category column from Groups table
+        - create category model
+        - re-seed data (db drop, db migrate, db seed)

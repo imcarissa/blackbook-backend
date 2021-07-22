@@ -3,7 +3,7 @@ class Api::V1::ContactsController < ApplicationController
 
     def index
         contact = @group.contacts
-        render json: contacts
+        render json: @contacts
     end
 
     
@@ -37,7 +37,7 @@ class Api::V1::ContactsController < ApplicationController
     private
 
     def set_group
-        @group = Group.find(params[:contact_id])
+        @group = Group.find(params[:group_id])
     end
 
     def contact_params

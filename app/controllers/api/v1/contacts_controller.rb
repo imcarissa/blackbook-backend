@@ -15,7 +15,7 @@ class Api::V1::ContactsController < ApplicationController
     def create
         contact = @group.contacts.new(contact_params)
         if contact.save
-            render json: contact
+            render json: @group
         else
             render json: {error: 'Contact not created'}
         end

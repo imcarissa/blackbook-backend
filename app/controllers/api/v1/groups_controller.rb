@@ -20,8 +20,10 @@ class Api::V1::GroupsController < ApplicationController
     end
 
     def update
+        group = Group.find(params[:id])
         if group.update(group_params)
-          render json: group
+            group.save
+            render json: group
         else
           render json: {error: 'Group not updated'}
         end

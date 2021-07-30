@@ -31,7 +31,9 @@ class Api::V1::ContactsController < ApplicationController
     
     def destroy
         contact = contact.find(params[:id])
+        group = Group.find(contact.group_id)
         contact.destory
+        render json: group
     end
 
     private

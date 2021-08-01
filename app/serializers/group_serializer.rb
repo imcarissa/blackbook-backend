@@ -1,4 +1,4 @@
 class GroupSerializer < ActiveModel::Serializer
-  attributes :id, :name, :category, :description, :img_url
+  attributes :id, :name, :about
   has_many :contacts
 end

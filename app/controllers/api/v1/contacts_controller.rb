@@ -43,6 +43,6 @@ class Api::V1::ContactsController < ApplicationController
     end
 
     def contact_params
-        params.require(:contact).permit(:group_id, :name, :img_url, :email, :phone_number, :notes)
+        params.require(:contact).permit(:group_id, :name, :email, :phone_number, :notes)
     end
 end

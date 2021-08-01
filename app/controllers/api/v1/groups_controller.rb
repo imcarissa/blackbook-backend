@@ -37,6 +37,6 @@ class Api::V1::GroupsController < ApplicationController
     private
 
     def group_params
-        params.require(:group).permit(:name, :category, :description)
+        params.require(:group).permit(:name, :about)
     end
 end

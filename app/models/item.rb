@@ -1,4 +1,4 @@
 class Item < ApplicationRecord
-    belongs_to :wishlists
+    belongs_to :wishlist
     validates :name, presence: true
 end

@@ -1,4 +1,4 @@
-class Api::V1::wishlistsController < ApplicationController
+class Api::V1::WishlistsController < ApplicationController
 
     def index
         wishlists = Wishlist.all 
@@ -15,22 +15,12 @@ class Api::V1::wishlistsController < ApplicationController
     end
 
     def show
-        wishlist = wishlist.find(params[:id])
+        wishlist = Wishlist.find(params[:id])
         render json: wishlist
-    end
-
-    def update
-        wishlist = wishlist.find(params[:id])
-        if wishlist.update(wishlist_params)
-            wishlist.save
-            render json: wishlist
-        else
-          render json: {error: 'wishlist not updated'}
-        end
     end
     
     def destroy
-        wishlist = wishlist.find(params[:id])
+        wishlist = Wishlist.find(params[:id])
         wishlist.destory
     end
 

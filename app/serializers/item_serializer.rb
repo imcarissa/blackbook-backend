@@ -1,4 +1,4 @@
 class ItemSerializer < ActiveModel::Serializer
-  attributes :wishlist_id :name :content
+  attributes :name, :content, :wishlist_id
   belongs_to :wishlists
 end

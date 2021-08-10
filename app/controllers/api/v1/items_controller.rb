@@ -17,7 +17,7 @@ class Api::V1::ItemsController < ApplicationController
         if item.save
             render json: @wishlist
         else
-            render json: {error: 'item not created'}
+            render json: {error: 'item not added'}
         end
     end
     

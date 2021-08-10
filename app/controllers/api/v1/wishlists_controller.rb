@@ -8,7 +8,7 @@ class Api::V1::WishlistsController < ApplicationController
     def create
         wishlist = Wishlist.new(wishlist_params)
         if wishlist.save
-            render json: wishlist
+            render json: wishlist, status: :accepted
         else
             render json: {error: 'wishlist not created'}
         end
@@ -22,6 +22,7 @@ class Api::V1::WishlistsController < ApplicationController
     def destroy
         wishlist = Wishlist.find(params[:id])
         wishlist.destory
+        render json: wishlist
     end
 
     private
